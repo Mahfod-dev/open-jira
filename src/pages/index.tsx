@@ -1,6 +1,7 @@
 import { Layout } from '@/components/layouts';
-import { Typography, Grid, CardHeader, Card, CardContent } from '@mui/material';
+import { Grid, CardHeader, Card, CardContent } from '@mui/material';
 import { Inter } from 'next/font/google';
+import { EntryCard,EntryList } from '@/components/ui';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,21 +13,23 @@ export default function Home() {
 					<Card sx={{ height: 'calc(100vh - 100px)' }}>
 						<CardHeader title='Pending' />
 
-          <CardContent>
-            {/* nouvelle tache */}
-            {/* liste d'entre */}
-          </CardContent>
-          
+						
+							<EntryList />
+							{/* nouvelle tache */}
+							{/* liste d'entre */}
+				
 					</Card>
 				</Grid>
 				<Grid item xs={12} sm={4}>
 					<Card sx={{ height: 'calc(100vh - 100px)' }}>
 						<CardHeader title='In Progress' />
+						<EntryList />
 					</Card>
 				</Grid>
 				<Grid item xs={12} sm={4}>
 					<Card sx={{ height: 'calc(100vh - 100px)' }}>
 						<CardHeader title='Completed' />
+						<EntryList />
 					</Card>
 				</Grid>
 			</Grid>
