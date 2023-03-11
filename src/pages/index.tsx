@@ -1,10 +1,13 @@
-import Head from 'next/head';
+import { Layout } from '@/components/layouts';
+import { Typography } from '@mui/material';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-	return <>
-  <h1>Hello world</h1>
-  hello world</>;
+	return <Layout>
+
+    <Typography variant='h1' color='primary'>Hello world</Typography>
+
+  </Layout>;
 }
