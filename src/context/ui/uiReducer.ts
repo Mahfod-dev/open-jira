@@ -1,22 +1,27 @@
 import { UIState } from './UIProvider';
 
 
-type UIActionType =
-| { type: '[UI] - ActionName' }
+export type UIActionType =
+| { type: 'UI - Open Sidebar' }
+| { type: 'UI - Close Sidebar' }
 
 
 
 export const uiReducer = (state: UIState, action: UIActionType): UIState => {
 
       switch (action.type) {
-      case '[UI] - ActionName':
+      case 'UI - Open Sidebar':
 return {
 ...state,
+sidemenuOpen: true,
 };
 
-
-
-       default:
-        return state;
+        case 'UI - Close Sidebar':
+return {
+...state,
+sidemenuOpen: false,
+};
+default:
+         throw new Error(`Invalid ${action}`);
                           }
 };
