@@ -1,6 +1,6 @@
 
 import Head from 'next/head';
-import { Navbar } from '../ui';
+import { Navbar, Sidebar } from '../ui';
 import { Box } from '@mui/material';
 
 export const Layout = ({children,title='OpenJira'}:{children:React.ReactNode,title?:string}) => {
@@ -17,7 +17,7 @@ export const Layout = ({children,title='OpenJira'}:{children:React.ReactNode,tit
             </Head>
 
             <Navbar/>
-            {/* sidebar */}
+            <Sidebar/>
             <Box sx={{
                 padding:'0.25rem 1.4rem',
             }}>
