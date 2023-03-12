@@ -12,7 +12,7 @@ import InboxOutlinedIcon from '@mui/icons-material/InboxOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 
 import { useUIContext } from '@/context/ui';
-import { sideOpenBar,sideCloseBar } from '@/context/ui';
+import { sideCloseBar } from '@/context/ui';
 
 
 const menuItems: string[] = ['Inbox', 'Starred', 'Send Email', 'Draf'];

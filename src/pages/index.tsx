@@ -1,7 +1,7 @@
 import { Layout } from '@/components/layouts';
 import { Grid, CardHeader, Card, CardContent } from '@mui/material';
 import { Inter } from 'next/font/google';
-import { EntryCard,EntryList } from '@/components/ui';
+import { EntryList, NewEntry } from '@/components/ui';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,6 +13,7 @@ export default function Home() {
 					<Card sx={{ height: 'calc(100vh - 100px)' }}>
 						<CardHeader title='Pending' />
 
+						<NewEntry/>
 						<EntryList status='pending' />
 						{/* nouvelle tache */}
 						{/* liste d'entre */}
