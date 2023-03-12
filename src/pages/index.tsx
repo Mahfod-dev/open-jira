@@ -13,23 +13,21 @@ export default function Home() {
 					<Card sx={{ height: 'calc(100vh - 100px)' }}>
 						<CardHeader title='Pending' />
 
-						
-							<EntryList />
-							{/* nouvelle tache */}
-							{/* liste d'entre */}
-				
+						<EntryList status='pending' />
+						{/* nouvelle tache */}
+						{/* liste d'entre */}
 					</Card>
 				</Grid>
 				<Grid item xs={12} sm={4}>
 					<Card sx={{ height: 'calc(100vh - 100px)' }}>
 						<CardHeader title='In Progress' />
-						<EntryList />
+						<EntryList status='in-progress' />
 					</Card>
 				</Grid>
 				<Grid item xs={12} sm={4}>
 					<Card sx={{ height: 'calc(100vh - 100px)' }}>
 						<CardHeader title='Completed' />
-						<EntryList />
+						<EntryList status='completed' />
 					</Card>
 				</Grid>
 			</Grid>
