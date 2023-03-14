@@ -1,6 +1,6 @@
-import { FC, PropsWithChildren, useReducer } from 'react';
+import { Dispatch, FC, PropsWithChildren, useReducer } from 'react';
 import { EntriesContext } from './EntriesContext';
-import { entriesReducer } from './entriesReducer';
+import { entriesReducer,EntriesActionType } from './entriesReducer';
 import { Entry } from '../../../interface';
 import {v4 as uuidv4} from 'uuid'
 
@@ -43,4 +43,23 @@ dispatch,
 {children}
 </EntriesContext.Provider>
 );
+};
+
+
+
+export const addEntry = (dispatch:Dispatch<EntriesActionType>,description:string) => {
+
+    const newEntry:Entry = {
+        _id:uuidv4(),
+        description,
+        status:'pending',
+        createdAt:Date.now()
+    }
+
+
+
+dispatch({
+	type: '[Entries] - Add-Entry',
+	payload: newEntry,
+});
 };

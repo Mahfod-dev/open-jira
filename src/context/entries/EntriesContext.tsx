@@ -1,7 +1,7 @@
 import { createContext,useContext,Dispatch } from 'react';
 import { EntriesState } from './EntriesProvider';
 import { EntriesActionType } from './entriesReducer';
-import { Entry } from '../../../interface';
+
 
 
 interface ContextProps {
