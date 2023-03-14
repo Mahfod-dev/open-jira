@@ -4,6 +4,7 @@ import { UIState } from './UIProvider';
 export type UIActionType =
 | { type: 'UI - Open Sidebar' }
 | { type: 'UI - Close Sidebar' }
+| { type: 'UI - Set isAddingEntry',payload:boolean}
 
 
 
@@ -21,6 +22,14 @@ return {
 ...state,
 sidemenuOpen: false,
 };
+      case 'UI - Set isAddingEntry':
+return {
+...state,
+isAddingEntry: action.payload,
+};
+
+
+
 default:
          throw new Error(`Invalid ${action}`);
                           }

@@ -4,8 +4,8 @@ import { UIState } from './UIProvider';
 
 
 type ContextProps = {
-	state: UIState;
-    dispatch: Dispatch<UIActionType>;
+	uiState: UIState;
+	actionUI: Dispatch<UIActionType>;
 };
 
 

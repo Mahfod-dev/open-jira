@@ -4,13 +4,13 @@ import { useUIContext,sideOpenBar } from "@/context/ui";
 
 export const Navbar = () => {
 
-const {dispatch} = useUIContext();
+const {actionUI} = useUIContext();
 
 return (
     <AppBar position="sticky">
 
    <Toolbar>
-    <IconButton size="large" edge='start' onClick={()=>sideOpenBar(dispatch)}>
+    <IconButton size="large" edge='start' onClick={()=>sideOpenBar(actionUI)}>
         <MenuOutlinedIcon/>
     </IconButton>
 

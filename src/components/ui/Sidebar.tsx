@@ -22,10 +22,10 @@ const menuItems: string[] = ['Inbox', 'Starred', 'Send Email', 'Draf'];
 
 export const Sidebar = () => {
 
-	const { state,dispatch } = useUIContext();
-	const { sidemenuOpen } = state;
+	const { uiState,actionUI } = useUIContext();
+	const { sidemenuOpen } = uiState;
 
-	const closeSideBar = ()=> sideCloseBar(dispatch);
+	const closeSideBar = ()=> sideCloseBar(actionUI);
 
 
 	return (
