@@ -63,3 +63,10 @@ dispatch({
 	payload: newEntry,
 });
 };
+
+export const updateEntry = (dispatch:Dispatch<EntriesActionType>,entry:Entry) => {
+dispatch({
+    type: "[Entries] - UPDATE_ENTRY",
+    payload: entry,
+});
+};

@@ -6,11 +6,13 @@ import { uiReducer,UIActionType } from './uiReducer';
 export interface UIState {
 	sidemenuOpen: boolean;
 	isAddingEntry:boolean;
+	isDragging:boolean;
 }
 
 const UI_INITIAL_STATE: UIState = {
 	sidemenuOpen: false,
 	isAddingEntry:false,
+	isDragging:false,
 };
 
 
@@ -34,4 +36,13 @@ export const sideOpenBar = (dispatch:Dispatch<UIActionType>) => dispatch({type: 
 export const sideCloseBar = (dispatch:Dispatch<UIActionType>) => dispatch({type: 'UI - Close Sidebar'});
 
 export const setIsAddingEntry = (dispatch:Dispatch<UIActionType>,isAdding:boolean) => dispatch({type: 'UI - Set isAddingEntry',payload:isAdding});
+
+export const startDragging = (dispatch:Dispatch<UIActionType>) => dispatch({type: 'UI - Start Dragging'});
+
+export const endDragging = (dispatch:Dispatch<UIActionType>) => dispatch({type: 'UI - End Dragging'});
+
+
+
+
+
 
